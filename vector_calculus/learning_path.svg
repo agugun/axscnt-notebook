@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1250" height="350" viewBox="0 0 1250 350" font-family="Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M0,0 L10,5 L0,10 z" fill="#444"/>
+    </marker>
+  </defs>
+  <rect width="1250" height="350" rx="12" fill="#ffffff"/>
+
+  <!-- Folder frames -->
+  <g fill="none" stroke="#bbb" stroke-width="1.5" stroke-dasharray="6 4">
+    <rect x="10" y="12" width="485" height="292" rx="12"/>
+    <rect x="675" y="12" width="565" height="292" rx="12"/>
+  </g>
+  <g font-size="13" fill="#777" font-family="Menlo, Consolas, monospace" text-anchor="middle">
+    <text x="252" y="328">vector_calculus/</text>
+    <text x="957" y="328">partial_differential_eq/</text>
+  </g>
+
+  <!-- Boxes -->
+  <g stroke-width="2">
+    <rect x="20"  y="115" width="190" height="90" rx="10" fill="#e8f1fb" stroke="#3b78c2"/>
+    <rect x="270" y="30"  width="210" height="90" rx="10" fill="#fdf0e2" stroke="#d9822b"/>
+    <rect x="270" y="200" width="210" height="90" rx="10" fill="#eef7ea" stroke="#4c9a3a"/>
+    <rect x="690" y="30"  width="240" height="90" rx="10" fill="#fbe9ec" stroke="#c23b52"/>
+    <rect x="690" y="200" width="240" height="90" rx="10" fill="#efeafb" stroke="#6b4fbb"/>
+    <rect x="990" y="30"  width="240" height="90" rx="10" fill="#e6f5f4" stroke="#2a9187"/>
+    <rect x="990" y="200" width="240" height="90" rx="10" fill="#f7f7f7" stroke="#aaa" stroke-dasharray="4 3"/>
+  </g>
+
+  <!-- Box text -->
+  <g text-anchor="middle" fill="#222">
+    <text x="115" y="150" font-size="16" font-weight="bold">1. Basic Vector Field</text>
+    <text x="115" y="175" font-size="13">what a field is</text>
+
+    <text x="375" y="65" font-size="16" font-weight="bold">2. Differential</text>
+    <text x="375" y="88" font-size="13">change at a point</text>
+    <text x="375" y="106" font-size="12" fill="#666">∇f, ∇·F, ∇×F, ∇²f</text>
+
+    <text x="375" y="235" font-size="16" font-weight="bold">3. Integral</text>
+    <text x="375" y="258" font-size="13">change added up over a region</text>
+    <text x="375" y="276" font-size="12" fill="#666">∫ F·dr, ∬ F·n dS, ∭ ρ dV</text>
+
+    <text x="810" y="62" font-size="16" font-weight="bold">4. Diffusion</text>
+    <text x="810" y="85" font-size="13"><tspan font-style="italic" fill="#c23b52">parabolic:</tspan> ∂u/∂t = D ∇²u</text>
+    <text x="810" y="104" font-size="11" fill="#666">heat: rod, plate · pressure: well</text>
+
+    <text x="810" y="232" font-size="16" font-weight="bold">5. Wave</text>
+    <text x="810" y="255" font-size="13"><tspan font-style="italic" fill="#6b4fbb">hyperbolic:</tspan> ∂²u/∂t² = c² ∇²u</text>
+    <text x="810" y="274" font-size="11" fill="#666">1D string and 2D membrane</text>
+
+    <text x="1110" y="62" font-size="16" font-weight="bold">6. Laplace / Poisson</text>
+    <text x="1110" y="85" font-size="13"><tspan font-style="italic" fill="#2a9187">elliptic:</tspan> ∇²u = f</text>
+    <text x="1110" y="104" font-size="11" fill="#666">steady plate · wells (Thiem) · solvers</text>
+
+    <text x="1110" y="226" font-size="13" font-weight="bold" fill="#555">Type = sign of B² − AC</text>
+    <text x="1110" y="247" font-size="12" fill="#555">&lt; 0 elliptic: boundary only</text>
+    <text x="1110" y="265" font-size="12" fill="#555">= 0 parabolic: smooths in time</text>
+    <text x="1110" y="283" font-size="12" fill="#555">&gt; 0 hyperbolic: travels at speed c</text>
+  </g>
+
+  <!-- Prerequisite arrows -->
+  <g stroke="#444" stroke-width="2" fill="none" marker-end="url(#arrow)">
+    <path d="M210,145 C240,125 245,90 268,80"/>
+    <path d="M375,120 L375,198"/>
+    <path d="M480,70 L688,70"/>
+    <path d="M480,240 L688,240"/>
+    <path d="M480,100 C580,120 600,200 688,225"/>
+    <path d="M480,215 C580,195 600,110 688,90"/>
+    <path d="M930,75 L988,75"/>
+  </g>
+
+  <!-- Arrow labels -->
+  <g font-size="12" fill="#444" font-style="italic" stroke="#ffffff" stroke-width="4" paint-order="stroke" stroke-linejoin="round">
+    <text x="385" y="165">local → total</text>
+    <text x="500" y="62">gradient: Fourier / Darcy flux</text>
+    <text x="500" y="258">energy, boundary forces</text>
+    <text x="492" y="126">∇²u: tension restoring force</text>
+    <text x="492" y="196">divergence theorem: conservation</text>
+  </g>
+
+  <!-- Sibling comparison (not a prerequisite) -->
+  <path d="M810,122 L810,198" stroke="#999" stroke-width="2" stroke-dasharray="5 4" fill="none"/>
+  <text x="820" y="155" font-size="12" fill="#777" font-style="italic">compare: 1st vs 2nd</text>
+  <text x="820" y="170" font-size="12" fill="#777" font-style="italic">time derivative</text>
+  <text x="960" y="68" font-size="12" fill="#444" font-style="italic" text-anchor="middle">∂u/∂t → 0</text>
+  <text x="960" y="92" font-size="12" fill="#444" font-style="italic" text-anchor="middle">steady</text>
+</svg>
